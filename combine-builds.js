@@ -1,28 +1,29 @@
 const fs = require("fs");
 const path = require("path");
-const { execSync } = require("child_process");
 
-const folders = ["client", "admin", "branch-admin"];
+const apps = ["client", "admin", "branch-admin"];
 const distRoot = path.join(__dirname, "dist");
 
-// Clear old dist folder
+// Remove old dist if exists
 if (fs.existsSync(distRoot)) {
   fs.rmSync(distRoot, { recursive: true, force: true });
 }
 
-// Create subfolders
-folders.forEach((folder) => {
-  const src = path.join(__dirname, folder, "dist");
-  const dest = path.join(distRoot, folder);
+// Copy each app's dist to root dist folder
+apps.forEach((app) => {
+  const src = path.join(__dirname, app, "dist");
+  const dest = path.join(distRoot, app);
+
+  if (!fs.existsSync(src)) {
+    console.error(`Build not found for ${app}: ${src}`);
+    return;
+  }
 
   fs.mkdirSync(dest, { recursive: true });
 
-  if (fs.existsSync(src)) {
-    // Copy all files
-    fs.readdirSync(src).forEach((file) => {
-      fs.cpSync(path.join(src, file), path.join(dest, file), { recursive: true });
-    });
-  }
+  fs.readdirSync(src).forEach((file) => {
+    fs.cpSync(path.join(src, file), path.join(dest, file), { recursive: true });
+  });
 });
 
-console.log("All builds combined into /dist successfully!");
+console.log("All apps combined into /dist successfully!");
