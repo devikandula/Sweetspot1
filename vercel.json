@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "projects": [
+    {
+      "name": "client-app",
+      "rootDirectory": "client",
+      "buildCommand": "npm run build",
+      "outputDirectory": "dist"
+    },
+    {
+      "name": "admin-app",
+      "rootDirectory": "admin",
+      "buildCommand": "npm run build",
+      "outputDirectory": "dist"
+    },
+    {
+      "name": "branch-admin-app",
+      "rootDirectory": "branch-admin",
+      "buildCommand": "npm run build",
+      "outputDirectory": "dist"
+    }
+  ]
+}
