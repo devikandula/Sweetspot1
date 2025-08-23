@@ -5,7 +5,7 @@ import Footer from '../components/Footer.jsx';
 function HomePage() {
   return (
     <div>
-     <NavBar />
+     <Navbar />
     <ParallaxCollection />
     <Footer />
     </div>
