@@ -45,7 +45,7 @@ const sampleProducts = [
     info: "Layers of chocolate sponge, whipped cream & cherries.",
     eggOption: "Contains Egg",
     weight: "1kg - 3kg",
-    stock: 6,
+    stock: 0,
     image:
       "https://images.unsplash.com/photo-1518047601542-79f18c655718?w=600&auto=format&fit=crop&q=60",
   },
