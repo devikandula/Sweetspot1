@@ -293,4 +293,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default Navbar;
