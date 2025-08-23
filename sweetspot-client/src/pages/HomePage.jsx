@@ -1,6 +1,6 @@
 import React from 'react';
 import ParallaxCollection from '../components/ParallaxCollection';
-import NavBar from '../components/Navbar.jsx';
+import Navbar from '../components/Navbar.jsx';
 import Footer from '../components/Footer.jsx';
 function HomePage() {
   return (
