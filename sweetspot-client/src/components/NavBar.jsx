@@ -15,7 +15,7 @@ import {
   Heart,
 } from "lucide-react";
 
-function NavBar() {
+function Navbar() {
   const navigate = useNavigate();
   const location = useLocation(); // Add this to track current route
   const { cartCount, cartItems, updateQuantity } = useCart();
