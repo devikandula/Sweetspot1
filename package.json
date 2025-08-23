@@ -1,0 +1,19 @@
+{
+  "name": "sweetspot-monorepo",
+  "private": true,
+  "workspaces": [
+    "client",
+    "admin",
+    "branch-admin"
+  ],
+  "scripts": {
+    "build": "npm run build:all",
+    "build:all": "npm run build:client && npm run build:admin && npm run build:branch-admin && npm run combine",
+    "build:client": "npm run build --workspace=client",
+    "build:admin": "npm run build --workspace=admin",
+    "build:branch-admin": "npm run build --workspace=branch-admin",
+    "combine": "node combine-builds.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
