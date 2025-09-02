@@ -1,11 +1,11 @@
 import React from 'react';
 import ParallaxCollection from '../components/ParallaxCollection';
-import Navbar from '../components/Navbar.jsx';
+import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
 function HomePage() {
   return (
     <div>
-     <Navbar />
+     <NavBar />
     <ParallaxCollection />
     <Footer />
     </div>
